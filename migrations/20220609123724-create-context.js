@@ -4,9 +4,9 @@ module.exports = {
     await queryInterface.createTable('Contexts', {
       id: {
         allowNull: false,
-        autoIncrement: true,
         primaryKey: true,
-        type: Sequelize.INTEGER
+        type: DataTypes.UUID,
+        defaultValue: DataTypes.UUIDV4
       },
       name: {
         type: Sequelize.STRING
