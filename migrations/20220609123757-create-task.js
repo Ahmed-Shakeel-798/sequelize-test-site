@@ -17,6 +17,14 @@ module.exports = {
       description: {
         type: Sequelize.TEXT
       },
+      ContextId: {
+        type: Sequelize.UUID,
+        onDelete: 'CASCADE',
+        references: {
+          model: 'Contexts',
+          key: 'id'
+        }
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE

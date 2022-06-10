@@ -10,7 +10,14 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      // define association here
+      Context.hasMany(models.Task, {
+        foreignKey: 'ContextId',
+        onDelete: 'CASCADE'
+      });
+      Context.belongsTo(models.User, {
+        foreignKey: 'UserId',
+        onDelete: 'CASCADE'
+      });
     }
   }
   Context.init({
