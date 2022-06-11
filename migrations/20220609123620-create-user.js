@@ -5,15 +5,15 @@ module.exports = {
       id: {
         allowNull: false,
         primaryKey: true,
-        type: DataTypes.UUID,
-        defaultValue: DataTypes.UUIDV4
+        type: Sequelize.UUID,
+        defaultValue: Sequelize.UUIDV4
       },
       email: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         unique: true
       },
       password: {
-        type: DataTypes.STRING,
+        type: Sequelize.STRING,
         allowNull: false
       },
       createdAt: {

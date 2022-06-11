@@ -11,6 +11,9 @@
   "license": "ISC",
   "dependencies": {
     "mysql": "^2.18.1",
-    "sequelize": "^6.20.1"
+    "mysql2": "^2.3.3",
+    "sequelize": "^6.20.1",
+    "sequelize-msnodesqlv8": "^0.2.6-beta.8",
+    "tedious": "^14.5.0"
   }
 }
